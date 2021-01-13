@@ -1,4 +1,9 @@
 <button (click)="onClick()">cliccami</button>
 <hr>
-*ngFor="let item of items"
-<app-libro item></app-libro>
+<li *ngFor="let libro of libri">
+  <!-- {{libro | json}} -->
+  <app-libro [libro]="libro"></app-libro>
+</li>
+
+
+

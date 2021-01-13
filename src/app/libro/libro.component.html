@@ -1,1 +1,5 @@
-mi hai passato il libro con titolo {{libro.titolo}}
+<!-- {{libro.titolo}} -->
+<input [value]="libro.titolo" [disabled] ="!edit" #titolo>
+<button (click)="OnAbilitaEditing(titolo)">edit</button>
+
+<button (click)="OnDelLibro(libro)">del</button>

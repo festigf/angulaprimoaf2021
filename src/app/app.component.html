@@ -2,7 +2,10 @@
 <hr>
 <li *ngFor="let libro of libri">
   <!-- {{libro | json}} -->
-  <app-libro [libro]="libro"></app-libro>
+  <app-libro
+    [libro]="libro"
+    (delLibro) = "OnDelLibro($event)"
+  ></app-libro>
 </li>
 
 

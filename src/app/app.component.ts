@@ -16,4 +16,9 @@ export class AppComponent {
   onClick(){
     console.log(this.title);
   }
+  OnDelLibro(libro:Libro){
+    console.log("log da componente padre",libro);
+    // crea un nuovo array
+    this.libri= this.libri.filter( libroInElenco => libro.titolo !== libroInElenco.titolo  );
+  }
 }

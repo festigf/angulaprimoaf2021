@@ -27,9 +27,9 @@ export class LibroComponent implements OnInit {
   }
 
 
-  OnAbilitaEditing(titolo){
-    this.edit=!this.edit;
-
+  OnAbilitaEditing(titolo): void{
+    this.edit = !this.edit;
+    
     titolo.focus();
   }
 }

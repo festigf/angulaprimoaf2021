@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter, ChangeDetectorRef } from '@angular/core';
 
 import { Libro } from '../domain/Libro';
 
@@ -12,7 +12,7 @@ export class LibroComponent implements OnInit {
   @Output('delLibro') delLibro= new EventEmitter<Libro>(); // alias
   @Output('editLibro') editLibro= new EventEmitter<Libro>(); // alias
   edit : boolean=false;
-  constructor() { }
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
